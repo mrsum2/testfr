@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loading-screen" id="loadingScreen">
+    <h1 id="loadingText">Play Game</h1>
+  </div>
+
+  <div id="menu" class="menu">
+    <h1>Game Hub</h1>
+    <input type="text" id="searchBar" placeholder="Search for a game..." />
+    <button id="searchButton">Search</button>
+    <div id="gamesList" class="results"></div>
+  </div>
+
+  <div id="fullscreen" class="fullscreen">
+    <button id="closeFullscreen">X</button>
+    <div id="gameEmbed"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
