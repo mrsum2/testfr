@@ -1,0 +1,107 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Smooth abstract RGB animation */
+body {
+  background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+  background-size: 400% 400%;
+  animation: smoothGradient 12s infinite;
+}
+
+@keyframes smoothGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Menu styling */
+.menu {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+input#searchBar {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button#searchButton {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff7f50, #ff4500);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button#searchButton:hover {
+  background: linear-gradient(90deg, #ff4500, #ff7f50);
+}
+
+.results button {
+  margin: 10px;
+  padding: 15px;
+  background: linear-gradient(90deg, #8a2be2, #4b0082);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.results button:hover {
+  background: linear-gradient(90deg, #4b0082, #8a2be2);
+}
+
+/* Fullscreen overlay */
+.fullscreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+}
+
+.fullscreen #closeFullscreen {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Loading screen */
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  font-size: 30px;
+  z-index: 10000;
+}
+
+.loading-screen.hidden {
+  display: none;
+}
