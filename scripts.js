@@ -8,16 +8,13 @@ const games = {
 const fullscreen = document.getElementById("fullscreen");
 const closeFullscreen = document.getElementById("closeFullscreen");
 const gameEmbed = document.getElementById("gameEmbed");
-const loadingScreen = document.getElementById("loadingScreen");
-const loadingText = document.getElementById("loadingText");
 const gamesList = document.getElementById("gamesList");
 const searchBar = document.getElementById("searchBar");
 const searchButton = document.getElementById("searchButton");
 
-// Initially hide the loading screen
+// Load games as buttons on page load
 window.onload = () => {
-  loadingScreen.classList.add("hidden");
-  loadGamesList(); // Populate the game buttons
+  loadGamesList();
 };
 
 // Populate games as buttons
@@ -49,14 +46,10 @@ searchButton.addEventListener("click", () => {
   }
 });
 
-// Load game with fullscreen and loading screen
+// Load game with fullscreen view
 function loadGame(gameKey) {
-  showLoadingScreen();
-  setTimeout(() => {
-    loadingScreen.classList.add("hidden");
-    fullscreen.style.display = "flex";
-    gameEmbed.innerHTML = games[gameKey];
-  }, 2000); // Simulate loading time
+  fullscreen.style.display = "flex";
+  gameEmbed.innerHTML = games[gameKey];
 }
 
 // Close fullscreen
@@ -64,9 +57,3 @@ closeFullscreen.addEventListener("click", () => {
   fullscreen.style.display = "none";
   gameEmbed.innerHTML = ""; // Clear the embed
 });
-
-// Show loading screen
-function showLoadingScreen() {
-  loadingText.textContent = "Loading Assets..."; // Focused message
-  loadingScreen.classList.remove("hidden");
-}
