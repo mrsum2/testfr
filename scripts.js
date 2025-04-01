@@ -17,7 +17,7 @@ const searchButton = document.getElementById("searchButton");
 // Initially hide the loading screen
 window.onload = () => {
   loadingScreen.classList.add("hidden");
-  loadGamesList(); // Populate the list of games when the site loads
+  loadGamesList(); // Populate the game buttons
 };
 
 // Populate games as buttons
@@ -67,6 +67,6 @@ closeFullscreen.addEventListener("click", () => {
 
 // Show loading screen
 function showLoadingScreen() {
-  loadingText.textContent = "Loading Assets...";
+  loadingText.textContent = "Loading Assets..."; // Focused message
   loadingScreen.classList.remove("hidden");
 }
